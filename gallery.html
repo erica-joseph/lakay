@@ -98,14 +98,14 @@
           <div class="btnline"></div>
         </div>
       </div>
-  <div class="container" id = "container" style = "background-size: contain; background-position: center; background-repeat: no-repeat; background-color: black;">
+  <div class="container" id = "container" style = "padding: 0px; background-size: contain; background-position: center; background-repeat: no-repeat; background-color: black;">
 
 
-    <div class="content" id = "content" style = "font-weight: 400; font-size: 1vw; overflow-y: scroll;">
+    <div class="content" id = "content" style = "padding: 0px; font-weight: 400; font-size: 1vw; overflow-y: scroll;">
 
 <div class="miniTwin" id = "twin" style = "color: white; filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 1));">Gallery</div> 
 
-<div class="slideshow-container fade" id = "slideshow-container" style = "background-size: cover; background-color: transparent;">
+<div class="slideshow-container fade" id = "slideshow-container" style = "background-size: cover; background-color: transparent; height: 100%;">
 
 
 <a class="prev" onclick="plusSlides(-1)">❮</a>
@@ -141,15 +141,13 @@
   if (aspect > 1.5) {
     landscape.style.display = 'block';
     portrait.style.display = 'none';
-    container.style.width = "83vw"
-    slideshow.style.height= "60vh";
+    container.style.width = "83vw";
     content.style.fontSize = "1vw";
     twin.style.display = "auto";
   } else if (aspect <= 1.5) {
     landscape.style.display = 'none';
     portrait.style.display = 'flex';
-    container.style.width = "100vw"
-    slideshow.style.height= "60vh";
+    container.style.width = "100vw";
     content.style.fontSize = "3vw";
     twin.style.display = "none";
   } 

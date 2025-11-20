@@ -378,12 +378,12 @@ img {vertical-align: middle;}
 
 /* Next & previous buttons */
 .prev, .next {
+  height: 100%;
+  display: flex;
   cursor: pointer;
   position: absolute;
-  top: 50%;
-  width: auto;
-  padding: 16px;
-  margin-top: -22px;
+  align-items: center;
+  width: 40%;
   color: white;
   font-weight: bold;
   font-size: 18px;
@@ -396,6 +396,9 @@ img {vertical-align: middle;}
 .next {
   right: 0;
   border-radius: 3px 0 0 3px;
+  text-align: right;
+  display: flex;
+  flex-direction: row-reverse;
 }
 
 /* On hover, add a black background color with a little bit see-through */
