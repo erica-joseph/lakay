@@ -484,6 +484,10 @@ img {vertical-align: middle;}
   cursor: pointer;
 }
 
+.leafThumbnail:hover{
+  filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, .5));
+}
+
 .leafContainer{
     display: flex;
     flex-direction: row;
