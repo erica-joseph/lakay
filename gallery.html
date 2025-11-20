@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Lakay Contractor Services</title>
+<title>Lakay General Contractor</title>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
 <link rel="stylesheet" href="styles.css">
@@ -138,9 +138,11 @@
   const container = document.getElementById('container');
   const twin = document.getElementById('twin');
   const content = document.getElementById('content');
+  const menu = document.getElementById("myMenu");
   if (aspect > 1.5) {
     landscape.style.display = 'block';
     portrait.style.display = 'none';
+    menu.style.display = 'none';
     container.style.width = "83vw";
     content.style.fontSize = "1vw";
     twin.style.display = "auto";
@@ -190,20 +192,27 @@ showSlides();
   
 }
 
-let cardinal = false; 
+let cardinal = false;
+let begin = 0;
 
 function menu() {
   const menu = document.getElementById("myMenu");
 
-  if (cardinal === false) {
+  if (begin === 0) {
+    menu.style.display = 'flex';
+    cardinal = true;
+  }
+  else if (begin === 1) {
     menu.style.display = 'none';
     cardinal = true;
-  } else {
-    menu.style.display = 'flex';
-    cardinal = false;
   }
-}
+  else {
+    cardinal = !cardinal;
+    menu.style.display = cardinal ? 'none' : 'flex';
+  }
 
+  begin++;
+}
 
 
 // Run it on page load

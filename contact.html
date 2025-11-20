@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Reborn Independent Living</title>
+<title>Lakay General Contractor</title>
 <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
 <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript"></script>
 <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
@@ -197,6 +197,7 @@ if (contactForm) {
   const contactForm = document.getElementById('contact-form');
   const container = document.getElementById('container');
   const content = document.getElementById('content');
+  const menu = document.getElementById("myMenu");
   if (aspect > 1.5) {
     landscape.style.display = 'block';
     portrait.style.display = 'none';
@@ -206,6 +207,7 @@ if (contactForm) {
     inputName.style.fontSize = "1vw";
     inputEmail.style.fontSize = "1vw";
     inputText.style.fontSize = "1vw";
+    menu.style.display = 'none';
     contactForm.style.fontSize = "1vw";
     send.style.fontSize = "1.5vw";
   } else if (aspect <= 1.5) {
@@ -222,18 +224,26 @@ if (contactForm) {
   } 
 }
 
-let cardinal = false; 
+let cardinal = false;
+let begin = 0;
 
 function menu() {
   const menu = document.getElementById("myMenu");
 
-  if (cardinal === false) {
+  if (begin === 0) {
+    menu.style.display = 'flex';
+    cardinal = true;
+  }
+  else if (begin === 1) {
     menu.style.display = 'none';
     cardinal = true;
-  } else {
-    menu.style.display = 'flex';
-    cardinal = false;
   }
+  else {
+    cardinal = !cardinal;
+    menu.style.display = cardinal ? 'none' : 'flex';
+  }
+
+  begin++;
 }
 
 // Run it on page load
