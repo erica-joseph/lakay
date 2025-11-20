@@ -1,3 +1,15 @@
+/*
+
+Palette
+
+Dark Blue: #333d58 -> #131a34
+Gold: #d6b683
+Orange: #c75646
+White: #ffffff
+
+*/
+
+
 * {
   box-sizing: border-box;
   overflow: clip
@@ -8,7 +20,7 @@ a {
   text-decoration: none;
 }
 a:hover {
-  color: #00bdff;
+  color: #c75646;
   text-decoration: none;
   font-weight: bold;
 }
@@ -16,7 +28,8 @@ a:hover {
 body {
   margin: 0;
   height:100%;
-  font-family: "Montserrat", sans-serif;
+  background-color: white;
+  font-family: "Nunito", sans-serif;
   font-optical-sizing: auto;
   font-weight: 100;
   font-style: normal;
@@ -32,9 +45,10 @@ body {
   height: 100vh;
   padding: 10px;
   background-color: rgb(255, 255, 255);
-  background-image: linear-gradient(to bottom, #263e51, #547b9b);
+  background-image: linear-gradient(to bottom, #333d58, #131a34);
+  border-right: 5px solid #c75646;
   margin: auto;
-    -webkit-user-select: none; /* Safari */
+  -webkit-user-select: none; /* Safari */
   -ms-user-select: none; /* IE 10 and IE 11 */
   user-select: none; /* Standard syntax */
 }
@@ -44,14 +58,16 @@ body {
   align-items: center;
 }
 .hbar{
-  
+  justify-content: space-between;
+  padding: 1vw;
   display: flex;
   align-items: center;
-     -webkit-user-select: none; 
+  -webkit-user-select: none; 
   -ms-user-select: none; 
   user-select: none; 
   overflow: scroll;
-  background-image: linear-gradient(to bottom, #263e51, #547b9b);
+  background-image: linear-gradient(to bottom, #333d58, #131a34);
+  border-bottom: 5px solid #c75646;
 }
 .profile {
     width: 7vw;
@@ -82,8 +98,29 @@ body {
     margin-left: 2vw;
 }
 .minititle{
+  font-family: "Montserrat", sans-serif;
   font-size: 3vw;
-  font-weight: bold;
+  color: white;
+  padding: 10px;
+  margin: auto;
+  width: 100%;
+  text-align: center;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 0),  rgba(0, 0, 0, 0.511),  rgba(255, 255, 255, 0));
+}
+
+.miniTwin{
+  font-family: "Montserrat", sans-serif;
+  font-size: 3vw;
+  color: rgb(0, 0, 0);
+  padding: 10px;
+  margin: auto;
+  width: 100%;
+  text-align: center;
+  display: flex;
 }
 .minisub{
   font-size: 2vw;
@@ -106,32 +143,33 @@ body {
   width: 83vw;
   height: 100vh;
   padding: 10px;
-  background-color: white;
+  background-color: transparent;
 }
 /*Actual page content*/
 .content {
   float: left;
   width: 100%;
-  height: 95vh;
+  height: 100vh;
   padding: 10px;
   background-color: transparent;
 }
 .logo {
-  width: 7vw;
-  height: 7vw;
+  width: 12vw;
+  height: 12vw;
   padding: 10px;
   display: flex;
   justify-content: center; /* center horizontally */
   background-color: transparent;
+  filter:drop-shadow(1px 1px 2px rgba(0, 0, 0, 1));
   margin: auto;
 }
 .hlogo {
-  width: 3vw;
-  height: 3vw;
+  width: 5vh;
+  height: 5vh;
   display: flex;
   justify-content: center; /* center horizontally */
   background-color: transparent;
-  margin: auto;
+  padding: 1vw;
   float: left;
 }
 .bumper {
@@ -256,7 +294,7 @@ body {
   animation-fill-mode: forwards; 
 }
 @keyframes example {
-  0%   {background-color: white; width: 0%;}
+  0%   {background-color: #c75646; width: 0%;}
   100% {background-color: white; width: 50%;}
 }
 
@@ -325,14 +363,17 @@ img {vertical-align: middle;}
 /* Slideshow container */
 .slideshow-container {
     max-width: 1000px;
+    filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, .3));
     position: relative;
     margin: auto;
     display: flex;
     align-items: center;
-    max-height: 300px;
-    border: .1vw solid white;
-    border-radius: 10px;
+    height: 100%;
     user-select: none;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: black;
 }
 
 /* Next & previous buttons */
@@ -359,7 +400,7 @@ img {vertical-align: middle;}
 
 /* On hover, add a black background color with a little bit see-through */
 .prev:hover, .next:hover {
-  background-color: rgba(0,0,0,0.8);
+  
 }
 
 /* Caption text */
@@ -432,21 +473,56 @@ img {vertical-align: middle;}
   border: 1px solid #00ff26;
 }
 
-.leafContainer{
+.leaves{
   display: flex;
-  flex-direction: row;
-  height: fit-content;
-  align-items: center;
-  padding: 2vw;
-}
-
-.leafInfo{
-  width: 80%;
+  flex-direction: column;
 }
 
 .leafThumbnail{
-  width: 20%;
-  border-radius: 100px;
+  width: 10vw;
+  filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, .3));
+  cursor: pointer;
+}
+
+.leafContainer{
+    display: flex;
+    flex-direction: row;
+    height: fit-content;
+    align-items: center;
+    padding: 1vw;
+    margin: 2vw;
+    background-color: white;
+    border: 1px solid #00000012;
+    transition: 0.3s;
+}
+
+.leafDetails{
+  display: flex;
+  flex-direction: column;
+  margin: 1vw 1vw 1vw 3vw;
+  padding: 1vw;
+  user-select: none;
+}
+
+@keyframes entrance {
+  from {top: 200px;}
+  to {top: 0px;}
+}
+
+.leafContainer:hover{
+  filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, .3));
+  color: #c75646;
+}
+
+.leafInfo{
+  width: 100%;
+  transition: 0.6s ease;
+}
+
+.leafTitle{
+  cursor: pointer;
+  width: 100%;
+  font-weight: bold;
 }
 
 table, th, td {
@@ -530,4 +606,24 @@ table, th, td {
   background-color: white;
   color: #263e51;
   border: 1px solid #263e51;
+}
+
+.myMenu{
+  display: none;
+  flex-direction: column;
+  width: 100%;
+  background-image: linear-gradient(to bottom, #333d58, #131a34);
+}
+
+.summaryTitle{
+  font-size: 3vw;
+  font-weight: bold;
+  width: 95%;
+  margin: auto;
+  user-select: none;
+}
+.summaryDetails{
+  width: 95%;
+  margin: auto;
+  user-select: none;
 }

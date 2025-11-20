@@ -16,16 +16,23 @@
 </head>
 <body>
 <div class="hbar" id="portraitElement">
-
-    <div class = "hnavbutton">
         <div class = "hlogo">
-        <img src = "resources/images/logo_inverted.svg" />
+        <img src = "resources/images/LakayLogo_Mix.svg" />
         </div>   
-        </div>  
+        <div class = "hlogo" onclick="menu()">
+          <img src = "resources/images/Hamburger.svg" />
+        </div>
+</div>
+<div class="myMenu" id = "myMenu">
+    <div class = "hnavbutton">
 
-     
+        </div>  
         <div class = "hnavbutton">
           <button class = "hbtn" onclick="window.location.href='/'"> HOME </button>
+          <div class="btnline"></div>
+        </div>
+        <div class = "hnavbutton">
+          <button class = "hbtn" onclick="window.location.href='gallery'"> GALLERY</button>
           <div class="btnline"></div>
         </div>
         <div class = "hnavbutton">
@@ -33,16 +40,21 @@
           <div class="btnline"></div>
         </div> 
         <div class = "hnavbutton">
+          <button class = "hbtn" onclick="window.location.href='financing'"> FINANCING </button>
+          <div class="btnline"></div>
+        </div>
+        <div class = "hnavbutton">
           <button class = "hbtn" onclick="window.location.href='contact'"> CONTACT </button>
           <div class="btnline"></div>
         </div>
 
 
       </div>
-</div> </div>
+</div> 
+
+</div>
 
 <div class="homeRow">
-  
       <div class="sidebar" id="landscapeElement">
         <div class = "bumper">
         </div>
@@ -52,13 +64,11 @@
         </div>
 
         <div class = "logo">
-          <img src = "resources/images/logo_inverted.svg" />
+          <img src = "resources/images/LakayLogo_H.svg" />
         </div>
 
       <div class = "name">
-        Reborn
-        <br>
-        Independent Living
+    
       </div>
 
       <div class = "line">
@@ -69,7 +79,15 @@
           <div class="btnline"></div>
         </div>
         <div class = "navbutton">
+          <button class = "btn" onclick="window.location.href='gallery'"> GALLERY </button>
+          <div class="btnline"></div>
+        </div>          
+        <div class = "navbutton">
           <button class = "btn" onclick="window.location.href='book'"> BOOK AN APPOINTMENT </button>
+          <div class="btnline"></div>
+        </div>  
+        <div class = "navbutton">
+          <button class = "btn" onclick="window.location.href='financing'"> FINANCING </button>
           <div class="btnline"></div>
         </div>       
         <div class = "navbutton">
@@ -87,7 +105,7 @@
  
 
 <div class = "contactContainer">
-  <img src = "resources/images/logo.svg" class = "contactLogo"/>
+  <img src = "resources/images/LakayLogo_Light.svg" class = "contactLogo"/>
 
  
 </div>
@@ -204,8 +222,19 @@ if (contactForm) {
   } 
 }
 
+let cardinal = false; 
 
+function menu() {
+  const menu = document.getElementById("myMenu");
 
+  if (cardinal === false) {
+    menu.style.display = 'none';
+    cardinal = true;
+  } else {
+    menu.style.display = 'flex';
+    cardinal = false;
+  }
+}
 
 // Run it on page load
 window.addEventListener('DOMContentLoaded', () => {

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="a" data-name="Layer 9" xmlns="http://www.w3.org/2000/svg" width="253.001239" height="261.808533" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 253.001239 261.808533">
+  <defs>
+    <clipPath id="b">
+      <rect x="8.551845" y="45.54535" width="234.760389" height="180.152337" fill="none"/>
+    </clipPath>
+  </defs>
+  <g clip-path="url(#b)">
+    <g>
+      <g id="c" data-name="&amp;lt;Grid Repeat&amp;gt;">
+        <rect x="17.197833" y="51.995291" width="219.119141" height="6.698975" rx="3.349484" ry="3.349484" fill="#fff"/>
+      </g>
+      <g id="d" data-name="&amp;lt;Grid Repeat&amp;gt;">
+        <rect x="17.197833" y="134.431044" width="219.119141" height="6.698975" rx="3.349484" ry="3.349484" fill="#fff"/>
+      </g>
+      <g id="e" data-name="&amp;lt;Grid Repeat&amp;gt;">
+        <rect x="17.197833" y="216.866797" width="219.119141" height="6.698975" rx="3.349484" ry="3.349484" fill="#fff"/>
+      </g>
+    </g>
+  </g>
+</svg>
