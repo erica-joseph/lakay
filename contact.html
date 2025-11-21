@@ -166,6 +166,10 @@ emailjs.init("v2gW77klotIXEm3Ne");
 const contactForm = document.getElementById('contact-form');
 if (contactForm) {
   contactForm.addEventListener('submit', function(e) {
+    const email = getElementById("inputEmail");
+    const name = getElementById("inputName");
+    const message = getElementById("inputText");
+
     e.preventDefault(); // prevent page reload
     console.log("Contact form submit triggered");
 
@@ -173,6 +177,9 @@ if (contactForm) {
       .then(() => {
         document.getElementById('status').innerText =
           "Thank you for your message! A representative will be in contact with you soon.";
+          email.value = "";
+          name.value = "";
+          message.value = "";
       })
       .catch(err => {
         console.error("EmailJS Error:", err);
