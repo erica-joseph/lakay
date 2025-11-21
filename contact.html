@@ -166,20 +166,14 @@ emailjs.init("v2gW77klotIXEm3Ne");
 const contactForm = document.getElementById('contact-form');
 if (contactForm) {
   contactForm.addEventListener('submit', function(e) {
-    const email = getElementById("inputEmail");
-    const name = getElementById("inputName");
-    const message = getElementById("inputText");
-
     e.preventDefault(); // prevent page reload
     console.log("Contact form submit triggered");
 
     emailjs.sendForm('service_92arq3b', 'template_xshc47n', contactForm)
       .then(() => {
         document.getElementById('status').innerText =
-          "Thank you for your message, " + name + "! A representative will be in contact with you soon. We will contact you at " + email + ".";
-          email.value = "";
-          name.value = "";
-          message.value = "";
+          "Thank you for your message! A representative will be in contact with you soon.";
+          contactForm.style.display = 'none';
       })
       .catch(err => {
         console.error("EmailJS Error:", err);
