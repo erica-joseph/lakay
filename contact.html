@@ -176,7 +176,7 @@ if (contactForm) {
     emailjs.sendForm('service_92arq3b', 'template_xshc47n', contactForm)
       .then(() => {
         document.getElementById('status').innerText =
-          "Thank you for your message! A representative will be in contact with you soon.";
+          "Thank you for your message, " + name + "! A representative will be in contact with you soon. We will contact you at " + email + ".";
           email.value = "";
           name.value = "";
           message.value = "";
